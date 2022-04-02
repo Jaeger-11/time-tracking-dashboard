@@ -11,8 +11,7 @@ const Box = ({ind, active}) => {
             const {title, timeframes, bg, img} = activity;
             const {daily, weekly, monthly} = timeframes;
             const present = timeframes[active]
-            console.log(timeframes[active])
-
+            
             return (
                 <div className="box" style={{backgroundColor: bg, backgroundImage: `url(${img})`}} key={index}>
                     <main className="mini">
@@ -21,7 +20,7 @@ const Box = ({ind, active}) => {
                             <img src={dots} alt="dot-icon" className="dots"/>
                         </section>
                         <article>
-                            <h2 className="current"> {present.current} hrs</h2>
+                            <h2 className="current"> {present.current}hrs</h2>
                             <p className="previous"> last Week - {present.previous}hrs</p>
                         </article>
                     </main>

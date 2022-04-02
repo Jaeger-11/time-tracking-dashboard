@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Box from "./box";
-import Data from "./data";
 import profile from './images/image-jeremy.png'
 const App = () => {
-    const [active, setActive] = useState('daily');
+    const [active, setActive] = useState('weekly');
     const handleClick = (event) => {
         const clicked = event.target.textContent;
         setActive(clicked);
@@ -17,20 +16,20 @@ const App = () => {
                         <img src={profile} alt="profile" className="profile"/>
                         <article>
                             <p>Report for</p>
-                            <h1>Jeremy Robson</h1>
+                            <h1 className="name">Jeremy Robson</h1>
                         </article>
                     </section>
                     <article className="options">
-                        <p className="option" onClick={handleClick}>daily</p>
-                        <p className="option" onClick={handleClick}>weekly</p>
-                        <p className="option" onClick={handleClick}>monthly</p>
+                        <p className={`option ${active === 'daily' && 'active'}`} onClick={handleClick}>daily</p>
+                        <p className={`option ${active === 'weekly' && 'active'}`} onClick={handleClick}>weekly</p>
+                        <p className={`option ${active === 'monthly' && 'active'}`} onClick={handleClick}>monthly</p>
                     </article>
                 </main>
                 <Box active = {active}/>
             </div>
             <footer className="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-                Coded by <a href="#">Falodun Oluwadamilola</a>.
+                Coded by <a href="https://github.com/Jaeger-11">Falodun Oluwadamilola</a>.
             </footer>
         </div>
     )
