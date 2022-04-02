@@ -5,9 +5,117 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(226, 43%, 10%);
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.mega{
+  margin-top: 5%;
+  display: block;
+}
+
+.container{
+  position: relative;
+  padding: 10px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.profile-main{
+  height: 180px;
+  border-radius: 10px;
+  position: relative;
+  background-color: hsl(235, 46%, 20%);
+}
+
+.profile-main section{
+  height: 60%;
+  background-color: hsl(246, 80%, 60%);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.profile{
+  width: 60px;
+  height: 60px;
+  border: 3px white solid;
+  border-radius: 50%;
+}
+
+.options{
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+/* STYLING OF ACTIVITY BOXES */
+.box{
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.mini{
+  height: 75%;
+  position:relative;
+  top: 25%;
+  padding: 10px;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+}
+
+.mini section, .mini article{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 5px;
+}
+
+.dots{
+  height: 5px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (min-width: 400px){
+  .container{
+    width: 80%;
+    margin:auto;
+  }
+  .profile-main{
+    grid-row-start: 1 ;
+    grid-row-end: 3;
+    height: auto;
+  }
+  .profile-main section{
+    position: relative;
+    border-radius: 10px;
+    display: block;
+    padding: 15px;
+  }
 }
