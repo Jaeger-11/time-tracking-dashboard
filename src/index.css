@@ -180,3 +180,9 @@ code {
     width: 80%;
   }
 }
+
+@media screen and (min-width: 1200px){
+  .container{
+    width: 85%;
+  }
+}
