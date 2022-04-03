@@ -14,7 +14,7 @@ const Box = ({ind, active}) => {
             
             return (
                 <div className="box" style={{backgroundColor: bg, backgroundImage: `url(${img})`}} key={index}>
-                    <main className="mini">
+                    <div className="mini">
                         <section>
                             <h4 className="title">{title}</h4>
                             <img src={dots} alt="dot-icon" className="dots"/>
@@ -23,7 +23,7 @@ const Box = ({ind, active}) => {
                             <h2 className="current"> {present.current}hrs</h2>
                             <p className="previous"> last Week - {present.previous}hrs</p>
                         </article>
-                    </main>
+                    </div>
                 </div>
             )
         })}
