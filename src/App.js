@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Box from "./box";
-import profile from './images/image-jeremy.png'
+import profile from './images/image-jeremy.png';
+
 const App = () => {
     const [active, setActive] = useState('weekly');
     const handleClick = (event) => {
